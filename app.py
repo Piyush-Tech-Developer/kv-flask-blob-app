@@ -13,7 +13,7 @@ def home():
         credential = DefaultAzureCredential()
 
         # Connect to Key Vault
-        key_vault_name = "mykeyvault123"   # CHANGE THIS
+        key_vault_name = "kv-appservice-poc"   # CHANGE THIS
         kv_url = f"https://{key_vault_name}.vault.azure.net/"
         secret_client = SecretClient(vault_url=kv_url, credential=credential)
 
