@@ -18,8 +18,8 @@ def home():
         secret_client = SecretClient(vault_url=kv_url, credential=credential)
 
         # Get secrets
-        storage_account = secret_client.get_secret("storageaccountname").value
-        container_name = secret_client.get_secret("containername").value
+        storage_account = secret_client.get_secret("storage-account-name").value
+        container_name = secret_client.get_secret("container-name").value
 
         # Connect to Blob Storage
         blob_service = BlobServiceClient(
